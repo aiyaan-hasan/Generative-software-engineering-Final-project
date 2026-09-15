@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GSE Project - GitHub Actions Workflow Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>GSE Project: GitHub Actions Workflow Builder</h1>
+        <p>Prepared by: Abdulqavi Mansuri (128267) & Aiyaan Hasan (128336)</p>
+        <hr>
+    </div>
+
+    <div class="container">
+        <!-- Blockly Editor -->
+        <div class="left-col">
+            <div class="info-row">
+                <h3>Visual Workspace</h3>
+                <button id="clear-btn">Clear Workspace</button>
+            </div>
+            <div id="blocklyDiv"></div>
+        </div>
+
+        <!-- Generated YAML -->
+        <div class="right-col">
+            <div class="info-row">
+                <h3>Generated YAML Configuration</h3>
+                <div>
+                    <span id="validation-badge" class="status-badge">Validating...</span>
+                    <button id="copy-btn">Copy Code</button>
+                    <button id="download-btn">Download YAML</button>
+                </div>
+            </div>
+            <ul id="validation-errors" class="validation-errors"></ul>
+            <pre class="code-output-box" id="code-output"># Drag in a Workflow block to generate code...</pre>
+        </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>

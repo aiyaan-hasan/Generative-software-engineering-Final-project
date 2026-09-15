@@ -1,0 +1,143 @@
+/* Extremely Basic Stylesheet (Looks manually coded) */
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #ffffff;
+    color: #000000;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header {
+    flex: 0 0 auto;
+    margin-bottom: 15px;
+}
+
+.header h1 {
+    margin: 0 0 5px 0;
+    font-size: 24px;
+}
+
+.header p {
+    margin: 0;
+    font-size: 14px;
+    color: #555555;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #000000;
+    margin-top: 10px;
+}
+
+.container {
+    flex: 1 1 auto;
+    display: flex;
+    gap: 20px;
+    min-height: 0; /* allow children to shrink/grow inside flex parent */
+}
+
+.left-col {
+    flex: 3 1 0;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 0;
+}
+
+.right-col {
+    flex: 2 1 0;
+    display: flex;
+    flex-direction: column;
+    min-width: 320px;
+    min-height: 0;
+}
+
+.info-row {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.info-row h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Blockly Container */
+#blocklyDiv {
+    flex: 1 1 auto;
+    min-height: 0;
+    width: 100%;
+    border: 1px solid #000000;
+}
+
+/* Code Output Box */
+.code-output-box {
+    flex: 1 1 auto;
+    min-height: 0;
+    margin: 0;
+    border: 1px solid #000000;
+    background-color: #fcfcfc;
+    padding: 10px;
+    font-family: Courier, monospace;
+    font-size: 13px;
+    line-height: 1.4;
+    overflow: auto;
+    white-space: pre-wrap;
+    box-sizing: border-box;
+}
+
+/* Standard HTML Buttons */
+button {
+    font-size: 12px;
+    padding: 3px 8px;
+    cursor: pointer;
+}
+
+/* Validation status badges */
+.status-badge {
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.badge-success {
+    color: green;
+}
+
+.badge-warning {
+    color: orange;
+}
+
+/* Validation error / issue list */
+.validation-errors {
+    display: none;
+    flex: 0 0 auto;
+    margin: 0 0 10px 0;
+    padding: 8px 8px 8px 24px;
+    background-color: #fff8e6;
+    border: 1px solid #e0b400;
+    border-radius: 3px;
+    font-size: 12px;
+    color: #7a5c00;
+    max-height: 120px;
+    overflow-y: auto;
+}
+
+.validation-errors li {
+    margin-bottom: 4px;
+}
+
+.validation-errors li:last-child {
+    margin-bottom: 0;
+}
